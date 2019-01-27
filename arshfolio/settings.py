@@ -133,6 +133,6 @@ STATICFILES_DIRS = [
 # MEDIA files
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'arshfolio/mediafiles', 'mediacdn')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'media_root')
 
 django_heroku.settings(locals())

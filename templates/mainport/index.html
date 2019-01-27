@@ -9,8 +9,9 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
+  
+  <link href="{% static 'mainport/arshali.png' %}" rel="icon">
   <link href="{% static 'mainport/img/arshali.png' %}" rel="icon">
-  <link href="{% static 'mainport/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Bootstrap CSS File -->
   <link href="{% static 'mainport/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -164,9 +165,11 @@
                     <h5 class="title-left">
                       About me
                     </h5>
-                  </div>
+                  </div>{% for forms in form %}
                   <p class="lead">
-                   
+                    {{ forms.message|safe }}
+                   </p>
+                   {% endfor %}
                 </div>
               </div>
 
@@ -176,7 +179,7 @@
       </div>
     </div>
   </section>
-   {% for forms in form %}{{ forms.message|safe }}{% endfor %}
+   
 
   <!--/ Section Services Star /-->
   <section id="service" class="services-mf route">
